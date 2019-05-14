@@ -1,0 +1,40 @@
+.docs {
+  &-head {
+    background: url(../images/docs-bg.jpg) top center no-repeat;
+    @include tablets {
+      background: url(../images/docs-bg_mob.jpg) top center no-repeat;
+      background-size: cover;
+    }
+    &__content {
+      margin-bottom: 230px;
+    }
+    &__heading {
+      @include gilam(black);
+      font-size: 95px;
+      line-height: 105px;
+      color: white;
+      padding-top: 230px;
+      margin: 0;
+      margin-bottom: 26px;
+      @include phones {
+        font-size: 47px;
+        line-height: 47px;
+      }
+      @include iphones {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+    &__text {
+      margin: 0;
+      @include helvetica(medium);
+      font-size: 16px;
+      line-height: 30px;
+      color: white;
+      padding-left: 108px;
+      @include tablets {
+        padding-left: 0;
+      }
+    }
+  }
+}

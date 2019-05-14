@@ -1,0 +1,163 @@
+.feedback {
+  position: relative;
+  background: transparent;
+  padding-top: 395px;
+  padding-bottom: 180px;
+  @include tablets {
+    padding-bottom: 41px;
+  }
+  @include phones {
+    /* padding-top: 100px; */
+    padding-top: 60px;
+    background: url(../images/bg-feedback_mob.png) no-repeat;
+    background-size: 100% 92%;
+    padding-bottom: 0;
+  }
+  &-content {
+    display: flex;
+    height: 600px;
+    overflow: hidden;
+    @include tablets {
+      height: auto;
+      flex-direction: column;
+    }
+  }
+  &-bg {
+    top: -358px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    overflow: hidden;
+    @include tablets {
+      top: -200px;
+    }
+    @include phones {
+      display: none;
+    }
+  }
+  &__text {
+    width: 37.2%;
+    padding-left: 53px;
+    @include tablets {
+      width: 100%;
+    }
+    @include phones {
+      padding-left: 0;
+      padding-bottom: 85px;
+    }
+  }
+  &__form {
+    width: 56.8%;
+    position: relative;
+    z-index: 2;
+    background: url(../images/bg-feedback-form.png) center no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    @include tablets {
+      width: 100%;
+    }
+    @include phones {
+      background: none;
+    }
+    &-bg {
+      position: absolute;
+      z-index: 1;
+    }
+    form {
+      padding-top: 75px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @include phones {
+        padding-top: 20px;
+      }
+    }
+  }
+  &__heading {
+    font-size: 65px;
+    line-height: 70px;
+    color: white;
+    @include gilam(black);
+    margin-bottom: 25px;
+    margin-top: 0;
+    @include tablets {
+      font-size: 45px;
+      line-height: 50px;
+    }
+  }
+  &__lead {
+    @include helvetica(roman);
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+  }
+  &__input {
+    border: none;
+    width: 365px;
+    background: transparent;
+    font-size: 15px;
+    @include helvetica(italic);
+    border-bottom: 1px solid #acacac;
+    padding: 17px 0;
+    margin-bottom: 8px;
+    color: $blue;
+    @include phones {
+      width: 280px;
+    }
+    &::placeholder {
+      color: $blue;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__submit {
+    margin-top: 34px;
+    width: 287px;
+    height: 68px;
+    border: none;
+    margin-bottom: 32px;
+    font-size: 13px;
+    text-transform: uppercase;
+    @include helvetica(bold);
+    text-decoration: none;
+    color: white;
+    @include phones {
+      width: 280px;
+    }
+  }
+  &__legal-text {
+    color: $lightgrey;
+    font-size: 12px;
+    line-height: 18px;
+    @include helvetica(roman);
+    display: flex;
+    justify-content: center;
+    width: 280px;
+    @include phones {
+      width: 200px;
+      text-align: center;
+    }
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.warning-message {
+  color: red;
+  display: none;
+  @include helvetica(italic);
+  font-size: 12px;
+}
+
+.is-invalid+.warning-message {
+  display: block;
+}

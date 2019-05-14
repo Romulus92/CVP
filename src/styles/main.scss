@@ -1,0 +1,61 @@
+// resolutions
+$macbookair: 1366px;
+$bignotebooks: 1280px;
+$notebooks: 1160px;
+$netbooks: 1024px;
+$tablets: 823px;
+$minitablets: 602px;
+$phones: 480px;
+$iphones: 320px;
+$phonesheight: 415px;
+//vendors
+@import "vendors/slick";
+@import "vendors/magnific-popup";
+@import "vendors/animate";
+// media
+@import "layout/_media";
+// config
+@import "config/_variables";
+@import "config/_mixins";
+// base
+@import "layout/_fonts";
+@import "layout/_base";
+//PAGES
+//common
+@import "common/button";
+@import "common/form";
+@import "common/burger";
+@import "common/text-color";
+@import "common/split";
+//index
+@import "pages/index/header";
+@import "pages/index/slider";
+@import "pages/index/know";
+@import "pages/index/advantages";
+@import "pages/index/steps";
+@import "pages/index/hesitate";
+@import "pages/index/court";
+@import "pages/index/license";
+@import "pages/index/list";
+@import "pages/index/expert";
+@import "pages/index/questions";
+@import "pages/index/ask";
+@import "pages/index/reviews";
+@import "pages/index/feedback";
+@import "pages/index/footer";
+@import "pages/index/consult-popup";
+@import "pages/index/success-popup";
+@import "pages/index/info-popup";
+//team
+@import "pages/team/hero";
+@import "pages/team/specs";
+//history
+@import "pages/history/history-head";
+@import "pages/history/history-slider";
+@import "pages/history/history-form";
+//docs
+@import "pages/docs/docs-head";
+@import "pages/docs/docs-item";
+//contacts
+@import "pages/contacts/contacts";
+@import "pages/test/test";

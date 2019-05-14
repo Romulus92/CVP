@@ -1,0 +1,12 @@
+.split {
+  display: none;
+  justify-content: center;
+  @include phones {
+    display: flex;
+  }
+  &-line {
+    width: 101px;
+    height: 2px;
+    background: $orange;
+  }
+}

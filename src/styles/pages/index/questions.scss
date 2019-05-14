@@ -1,0 +1,124 @@
+.questions {
+  @include phones {
+    margin-top: 55px;
+  }
+  &-content {
+    padding-left: 50px;
+    @include phones {
+      padding-left: 0;
+    }
+  }
+  &__heading {
+    font-size: 65px;
+    line-height: 75px;
+    color: $blue;
+    @include gilam(black);
+    margin-top: 0;
+    margin-bottom: 85px;
+    max-width: 700px;
+    @include phones {
+      font-size: 40px;
+      line-height: 45px;
+      margin-bottom: 40px;
+    }
+  }
+  &__list {
+    padding: 0;
+  }
+  &__item {
+    margin-bottom: 50px;
+    cursor: pointer;
+    @include phones {
+      margin-bottom: 20px;
+    }
+    &-active {
+      .questions__text {
+        color: $blue;
+        border: none;
+      }
+      .questions__answer {
+        height: 100%;
+        a {
+          display: inline;
+        }
+      }
+      .questions__img {
+        .no-svgforeignobject & {
+          display: none;
+        }
+        fill: white;
+        transform: rotate(180deg);
+      }
+      .questions__img-fallback {
+        margin-left: 0;
+        .no-svgforeignobject & {
+          display: block;
+        }
+      }
+      .questions__picture {
+        border: $blue;
+        background-color: $blue;
+      }
+      .questions__underline {
+        display: none;
+      }
+    }
+    display: flex;
+  }
+  &__picture {
+    width: 43px;
+    height: 43px;
+    @include gradient-border(#d3d9e7, $lightgrey, 1px, "to bottom");
+    margin-right: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablets {
+      margin-right: 20px;
+    }
+    @include tablets {
+      display: none;
+    }
+    /* transition: all 1s ease-in-out; */
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    fill: $blue;
+    width: 17px;
+    transition: all 0.4s ease-in-out;
+    &-fallback {
+      display: none;
+      width: 17px;
+      height: 22px;
+      margin-left: -14px;
+      .no-svgforeignobject & {
+        display: block;
+      }
+    }
+  }
+  &__text {
+    @include helvetica(bold);
+    font-size: 25px;
+    line-height: 38px;
+    color: $darkgrey;
+    transition: all 0.4s ease-in-out;
+    border-bottom: 1px dashed $lightgrey;
+  }
+  &__answer {
+    @include helvetica(roman);
+    font-size: 14px;
+    line-height: 24px;
+    color: $darkgrey;
+    width: 545px;
+    /* display: none; */
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    margin-top: 22px;
+    transition: all 0.4s ease-in-out;
+    @include phones {
+      width: auto;
+    }
+  }
+}

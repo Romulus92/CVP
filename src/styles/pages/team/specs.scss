@@ -1,0 +1,186 @@
+.specs {
+  &__heading {
+    font-size: 45px;
+    @include gilam(black);
+    color: $blue;
+    text-align: center;
+    margin-bottom: 168px;
+    @include tablets {
+      text-align: left;
+      margin-bottom: 50px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 67px;
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    width: 50%;
+    display: flex;
+    @include tablets {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  &__photo {
+    width: 50%;
+    @include tablets {
+      width: 100%;
+      transform: scale(0.7);
+    }
+  }
+  &__img {
+    padding-left: 35px;
+    padding-right: 40px;
+    @include bignotebooks {
+      width: 95%;
+    }
+  }
+  &__info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    @include tablets {
+      width: 100%;
+    }
+  }
+  &__name {
+    font-size: 20px;
+    line-height: 30px;
+    @include helvetica(black);
+    color: $blue;
+  }
+  &__role {
+    font-size: 14px;
+    line-height: 25px;
+    @include helvetica(roman);
+    color: $lightgrey;
+    margin-bottom: 35px;
+  }
+  &__desc {
+    padding: 0;
+    margin: 0;
+    &-item {
+      list-style: disc inside;
+      color: $orange;
+      span {
+        color: $darkgrey;
+        font-size: 14px;
+        line-height: 24px;
+        @include helvetica(roman);
+      }
+    }
+  }
+  &__stats {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 94px;
+    padding-left: 0;
+    @include tablets {
+      flex-direction: column;
+    }
+    &-item {
+      flex-grow: 1;
+      flex-basis: 0;
+      display: flex;
+      flex-direction: column;
+      height: 280px;
+      margin-right: 16px;
+      text-align: center;
+      @include tablets {
+        width: 100%;
+        flex-basis: initial;
+        margin-bottom: 10px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      &:last-of-type {
+        margin-left: 0;
+      }
+      &_office {
+        background: url(../images/specs-stats-1.png) center center no-repeat;
+        @include tablets {
+          background: url(../images/specs-stats-1_mob.png) center center no-repeat;
+          background-size: cover;
+        }
+      }
+      &_doctors {
+        background: url(../images/specs-stats-2.png) center center no-repeat;
+        @include tablets {
+          background: url(../images/specs-stats-2_mob.png) center center no-repeat;
+          background-size: cover;
+        }
+      }
+      &_lawyers {
+        background: url(../images/specs-stats-3.png) center center no-repeat;
+        @include tablets {
+          background: url(../images/specs-stats-3_mob.png) center center no-repeat;
+          background-size: cover;
+        }
+      }
+      &_overall {
+        background: url(../images/specs-stats-4.png) center center no-repeat;
+        @include tablets {
+          background: url(../images/specs-stats-4_mob.png) center center no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+    &-number {
+      font-size: 185px;
+      margin-top: -10px;
+      color: $orange;
+      @include gilam(thin-italic);
+    }
+    &-text {
+      font-size: 18px;
+      line-height: 25px;
+      margin-top: -37px;
+      color: $lightgrey;
+      @include helvetica(light-italic);
+    }
+  }
+  &__text {
+    display: flex;
+    margin-bottom: 65px;
+    @include tablets {
+      flex-direction: column;
+    }
+    &-column {
+      width: 50%;
+      padding-right: 10px;
+      @include tablets {
+        width: 100%;
+        padding-right: 0;
+      }
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+    &-block {
+      font-size: 14px;
+      line-height: 24px;
+      color: $darkgrey;
+      @include helvetica(roman);
+    }
+  }
+  &__gallery {
+    display: flex;
+    margin-bottom: 165px;
+    overflow: hidden;
+    @include tablets {
+      display: none;
+    }
+    &-img {
+      padding-right: 16px;
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+}

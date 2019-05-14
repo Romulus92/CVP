@@ -1,0 +1,247 @@
+.license {
+  @include phones {
+    padding-bottom: 120px;
+    margin-top: 55px;
+  }
+  &__heading {
+    @include gilam(black);
+    font-size: 65px;
+    line-height: 75px;
+    color: $blue;
+    padding-left: 50px;
+    margin: 0;
+    margin-bottom: 30px;
+    @include phones {
+      font-size: 40px;
+      line-height: 45px;
+      padding-left: 0;
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+  &__paragraph {
+    @include helvetica(roman);
+    font-size: 14px;
+    line-height: 24px;
+    color: $darkgrey;
+    width: 465px;
+    margin-bottom: 25px;
+    @include phones {
+      width: auto;
+    }
+  }
+  &__info {
+    display: flex;
+    @include tablets {
+      align-items: center;
+      flex-direction: column;
+    }
+    &-1 {
+      justify-content: space-between;
+    }
+    &-2 {
+      justify-content: flex-end;
+    }
+  }
+  &__gallery {
+    position: relative;
+    width: 500px;
+    @include phones {
+      display: none;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 1px;
+    @include gradient-border(#d3d9e7, $lightgrey, 1px, "to bottom");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &-bg {
+      width: 48px;
+      height: 48px;
+      background: white;
+      transition: background-color 0.4s ease-in-out;
+    }
+    &-left {
+      left: -25px;
+      &:hover {
+        @include gradient-border(#0078d7, #0063b1, 1px, "to left");
+        .license__arrow-bg {
+          background: linear-gradient(to left, #0078d7, #0063b1);
+        }
+        .license__arrow-img {
+          fill: white;
+        }
+      }
+    }
+    &-right {
+      right: -25px;
+      &:hover {
+        @include gradient-border(#0078d7, #0063b1, 1px, "to right");
+        .license__arrow-bg {
+          background: linear-gradient(to right, #0078d7, #0063b1);
+        }
+        .license__arrow-img {
+          fill: white;
+        }
+      }
+    }
+    &-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      fill: $blue;
+      width: 17px;
+      transition: fill 0.4s ease-in-out;
+      .no-svgforeignobject & {
+        display: none;
+      }
+      &-fallback {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        display: none;
+        width: 23px;
+        height: 18px;
+        .no-svgforeignobject & {
+          display: block;
+        }
+      }
+    }
+  }
+  &__list {
+    width: 100%;
+    height: 100%;
+  }
+  &__parallax {
+    width: 58%;
+    position: relative;
+    @include tablets {
+      display: none;
+    }
+    &-item {
+      position: absolute;
+      &-1 {
+        left: 0;
+        z-index: 2;
+      }
+      &-2 {
+        left: -46px;
+        bottom: -183px;
+      }
+      &-3 {
+        left: -159px;
+        top: 62px;
+      }
+      &-4 {
+        right: 213px;
+        top: -60px;
+      }
+    }
+  }
+  &__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__image {
+    margin-bottom: 21px;
+    &-folder {
+      position: absolute;
+      &-1 {
+        left: 0;
+        z-index: 2;
+      }
+    }
+    &-paper1 {
+      left: -46px;
+      bottom: -183px;
+    }
+    &-paper2 {
+      left: -159px;
+      top: 62px;
+    }
+    &-paper3 {
+      right: 213px;
+      top: -60px;
+    }
+  }
+  &__progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    &-bar {
+      width: 44px;
+      height: 3px;
+      background: #d3d9e7;
+    }
+    &-item {
+      width: 44px;
+      height: 3px;
+      margin: 0 5px;
+      &-active {
+        .license__progress-bar {
+          background: $blue;
+        }
+      }
+    }
+  }
+  &__text {
+    padding-left: 50px;
+    padding-top: 13px;
+    &-span {
+      position: relative;
+      border-bottom: 3px solid #0b69c9;
+      /* &:after {
+        content: "";
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: -8px;
+        width: 108%;
+        background-color: #0b69c9;
+        margin-top: 3px;
+      } */
+    }
+    &-heading {
+      @include helvetica(black);
+      font-size: 32px;
+      line-height: 40px;
+      position: relative;
+      margin-top: 0;
+      margin-bottom: 40px
+    }
+    &-2 {
+      margin-top: 150px;
+      width: 500px;
+      padding: 0;
+      @include tablets {
+        width: auto;
+      }
+    }
+    @include tablets {
+      padding-left: 0;
+    }
+    @include phones {
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+  &__picture {
+    display: none;
+    height: 420px;
+    background: url(../images/license_bg.png) no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    @include phones {
+      display: block;
+    }
+  }
+}

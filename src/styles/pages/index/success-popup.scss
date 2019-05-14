@@ -1,0 +1,35 @@
+.success-popup {
+  position: relative;
+  margin: auto;
+  background: white;
+  width: 476px;
+  height: 224px;
+  padding: 49px 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include phones {
+    justify-content: space-around;
+    width: 280px;
+    padding: 20px 20px;
+  }
+  &__heading {
+    @include helvetica(bold);
+    font-size: 25px;
+    line-height: 35px;
+    color: $blue;
+    text-align: center;
+    margin: 0;
+  }
+  &__text {
+    @include helvetica(roman);
+    font-size: 14px;
+    line-height: 24px;
+    color: $darkgrey;
+    text-align: center;
+    margin: 0;
+  }
+  .mfp-close {
+    display: none;
+  }
+}

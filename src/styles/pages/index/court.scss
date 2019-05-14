@@ -1,0 +1,107 @@
+.court {
+  /* background: url(../images/bg-boat.png) no-repeat; */
+  height: 1050px;
+  position: relative;
+  @include tablets {
+    background: url(../images/bg-boat_tablet.jpg) no-repeat;
+    background-size: 100%;
+    height: 650px;
+    background-size: 106% 97%;
+  }
+  @include phones {
+    height: 1000px;
+    background: url(../images/bg-boat_mob.png) no-repeat;
+    background-size: cover;
+  }
+  &-content {
+    @include phones {
+      padding-top: 200px;
+    }
+  }
+  &-bg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* object-fit: cover; */
+    overflow: hidden;
+    z-index: -1;
+    &-img {
+      @include tablets {
+        display: none;
+      }
+    }
+    &-ice {
+      position: absolute;
+      @include tablets {
+        display: none;
+      }
+      &-1 {
+        bottom: 460px;
+        left: 750px;
+      }
+      &-2 {
+        bottom: 531px;
+        left: 942px;
+      }
+      &-3 {
+        bottom: 604px;
+        left: 1010px;
+      }
+      &-4 {
+        top: 369px;
+        left: 1000px;
+      }
+      &-5 {
+        top: 197px;
+        left: 97px;
+      }
+    }
+  }
+  &__heading {
+    margin-top: 305px;
+    font-size: 65px;
+    line-height: 75px;
+    color: white;
+    @include gilam(black);
+    padding-left: 53px;
+    margin-bottom: 35px;
+    @include macbookair {
+      padding-left: 137px;
+    }
+    @include tablets {
+      padding-left: 67px;
+      margin-top: 120px;
+      padding-left: 0;
+      font-size: 50px;
+      line-height: 55px;
+    }
+    @include minitablets {
+      font-size: 40px;
+      line-height: 45px;
+    }
+    @include phones {
+      font-size: 40px;
+      line-height: 45px;
+    }
+  }
+  &__lead {
+    font-size: 14px;
+    line-height: 24px;
+    @include helvetica(roman);
+    color: white;
+    width: 475px;
+    padding-left: 96px;
+    @include macbookair {
+      padding-left: 240px;
+      width: 725px;
+    }
+    @include tablets {
+      padding-left: 0;
+      width: 350px;
+    }
+    @include phones {
+      width: 270px;
+    }
+  }
+}

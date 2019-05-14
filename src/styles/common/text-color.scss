@@ -1,0 +1,20 @@
+.text-grey {
+  color: $lightgrey;
+  @include phones {
+    color: white;
+  }
+}
+
+.text-blue {
+  color: $blue;
+  @include phones {
+    color: white;
+  }
+}
+
+.text-orange {
+  color: $orange;
+  @include phones {
+    color: white;
+  }
+}

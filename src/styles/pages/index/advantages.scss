@@ -1,0 +1,495 @@
+.advantages {
+  margin-bottom: 156px;
+  position: relative;
+  padding-top: 263px;
+  @include tablets {
+    padding-top: 80px;
+    margin-bottom: 80px;
+  }
+  &-bg {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 0;
+    top: -165px;
+    @include tablets {
+      top: -455px;
+    }
+    @include phones {
+      display: none;
+    }
+  }
+  &-text {
+    padding-top: 160px;
+    width: 36%;
+    @include tablets {
+      width: 100%;
+      padding-top: 115px;
+    }
+    @include phones {
+      padding-top: 0;
+    }
+    &__heading {
+      @include gilam(black);
+      font-size: 45px;
+      line-height: 55px;
+      color: $blue;
+    }
+    &__image {
+      &-1 {
+        margin-left: -80px;
+        @include tablets {
+          display: none;
+        }
+      }
+      &-2 {
+        margin-left: -50px;
+        margin-top: -186px;
+        @include tablets {
+          display: none;
+        }
+      }
+    }
+  }
+  &-circle {
+    width: 64%;
+    position: relative;
+    @include tablets {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include minitablets {
+      display: none;
+    }
+    &__info {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 350px;
+      height: 350px;
+      top: 18%;
+      left: 28%;
+      @include bignotebooks {
+        top: 11%;
+        left: 26%;
+      }
+      &-heading {
+        font-size: 25px;
+        line-height: 35px;
+        color: $darkgrey;
+        @include helvetica(black);
+        @include bignotebooks {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+      &-text {
+        font-size: 14px;
+        line-height: 24px;
+        color: $darkgrey;
+        @include helvetica(roman);
+        @include bignotebooks {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+      &-list {
+        padding: 0;
+      }
+      &-item {
+        display: none;
+        &-active {
+          display: block;
+        }
+      }
+    }
+    &__round {
+      width: 100%;
+    }
+    /* &__arrow {
+      display: none;
+      position: absolute;
+      width: 40%;
+    } */
+    &__item {
+      width: 137px;
+      height: 137px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      cursor: pointer;
+      &-1 {
+        top: -6%;
+        left: 42%;
+        .advantage-circle__arrow {
+          display: none;
+          position: absolute;
+          width: 40%;
+          right: 40px;
+          top: 148px;
+        }
+        @include bignotebooks {
+          top: -5%;
+          left: 39.5%;
+        }
+        @include tablets {
+          top: -10%;
+          left: 38.5%;
+        }
+      }
+      &-2 {
+        top: 7.5%;
+        right: 2%;
+        .advantage-circle__arrow {
+          display: none;
+          position: absolute;
+          width: 40%;
+          transform: rotate(54deg);
+          right: 118px;
+          top: 113px;
+        }
+        @include bignotebooks {
+          top: 5%;
+          right: 1.5%;
+        }
+        @include tablets {
+          top: 9%;
+          right: 0.5%;
+        }
+      }
+      &-3 {
+        right: -6%;
+        bottom: 53%;
+        .advantage-circle__arrow {
+          display: none;
+          position: absolute;
+          width: 40%;
+          transform: rotate(112deg);
+          right: 129px;
+          top: 22px;
+        }
+        @include bignotebooks {
+          right: -9%;
+          bottom: 61%;
+        }
+        @include tablets {
+          right: -9%;
+          bottom: 31%;
+        }
+      }
+      &-4 {
+        bottom: 30.5%;
+        right: 20%;
+        .advantage-circle__arrow {
+          display: none;
+          position: absolute;
+          width: 40%;
+          transform: rotate(158deg);
+          right: 70px;
+          top: -35px;
+        }
+        @include bignotebooks {
+          bottom: 44.5%;
+          right: 19%;
+        }
+        @include tablets {
+          bottom: -1.5%;
+          right: 18%;
+        }
+      }
+      &-5 {
+        left: 19.5%;
+        bottom: 30.5%;
+        .advantage-circle__arrow {
+          display: none;
+          position: absolute;
+          width: 40%;
+          transform: rotate(-158deg);
+          left: 70px;
+          top: -35px;
+        }
+        @include bignotebooks {
+          left: 18.5%;
+          bottom: 44%;
+        }
+        @include tablets {
+          left: 17.5%;
+          bottom: -2%;
+        }
+      }
+      &-6 {
+        bottom: 53.5%;
+        left: -6%;
+        .advantage-circle__arrow {
+          display: none;
+          position: absolute;
+          width: 40%;
+          transform: rotate(-112deg);
+          left: 129px;
+          top: 22px;
+        }
+        @include bignotebooks {
+          bottom: 62%;
+          left: -8%;
+        }
+        @include tablets {
+          bottom: 31%;
+          left: -8%;
+        }
+      }
+      &-7 {
+        top: 7%;
+        left: 3%;
+        .advantage-circle__arrow {
+          display: none;
+          position: absolute;
+          width: 40%;
+          transform: rotate(-54deg);
+          right: -41px;
+          top: 113px;
+        }
+        @include bignotebooks {
+          top: 5%;
+          left: 1.5%;
+        }
+        @include tablets {
+          top: 9%;
+          left: 0.5%;
+        }
+      }
+      &-active {
+        background: #fcb713;
+        .advantage-circle__arrow {
+          display: block;
+          @include tablets {
+            display: none;
+          }
+        }
+      }
+    }
+    &__image {
+      height: 70%;
+      /* &-1 {
+        height: 110px;
+      }
+      &-2 {
+        height: 110px;
+      }
+      &-3 {
+        height: 106px;
+      }
+      &-4 {
+        height: 107px;
+      }
+      &-5 {
+        height: 110px;
+      }
+      &-6 {
+        height: 108px;
+      }
+      &-7 {
+        height: 110px;
+      } */
+    }
+  }
+  &__dot {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    position: absolute;
+    &-active {
+      background: #fcb713;
+    }
+    &-1 {
+      right: -96px;
+      bottom: 14px;
+      @include bignotebooks {
+        right: -69px;
+        bottom: 33px;
+      }
+      @include tablets {
+        right: -58px;
+        bottom: 34px;
+      }
+    }
+    &-2 {
+      bottom: -90px;
+      right: -12px;
+      @include bignotebooks {
+        bottom: -67px;
+        right: -8px;
+      }
+      @include tablets {
+        bottom: -55px;
+        right: -3px;
+      }
+    }
+    &-3 {
+      bottom: -90px;
+      left: -2px;
+      @include bignotebooks {
+        bottom: -63px;
+        left: -3px;
+      }
+      @include tablets {
+        bottom: -67px;
+        left: 8px;
+      }
+    }
+    &-4 {
+      left: -96px;
+      top: 96px;
+      @include bignotebooks {
+        left: -68px;
+        top: 101px;
+      }
+      @include tablets {
+        left: -55px;
+        top: 96px;
+      }
+    }
+    &-5 {
+      top: -45px;
+      left: -75px;
+      @include bignotebooks {
+        top: -26px;
+        left: -59px;
+      }
+      @include tablets {
+        top: -16px;
+        left: -47px;
+      }
+    }
+    &-6 {
+      top: -102px;
+      left: 47px;
+      @include bignotebooks {
+        top: -78px;
+        left: 52px;
+      }
+      @include tablets {
+        top: -59px;
+        left: 46px;
+      }
+    }
+    &-7 {
+      top: -48px;
+      right: -68px;
+      @include bignotebooks {
+        top: -32px;
+        left: 163px;
+      }
+      @include tablets {
+        top: -27px;
+        left: 149px;
+      }
+    }
+  }
+  &-slider {
+    display: none;
+    @include minitablets {
+      display: block;
+    }
+    &__item {
+      height: 154px;
+      width: 154px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(0.5);
+      /* margin-left: 20px;
+      margin-right: 20px; */
+      /* .slick-active & {
+        height: 154px;
+      } */
+    }
+    &__image {
+      height: 75%;
+      width: 75%;
+      position: absolute;
+    }
+    &__bg {
+      display: none;
+      width: 154px;
+      height: 154px;
+      position: absolute;
+      background: $orange;
+      top: 0;
+      border-radius: 50%;
+      z-index: -1;
+    }
+    .slick-current {
+      /* width: 154px; */
+      /* height: 154px; */
+      /* background: $orange; */
+      /* background-size: 100% 100%; */
+      border-radius: 50%;
+      transform: scale(1);
+      .advantages-slider__bg {
+        display: block;
+      }
+    }
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &-content-slider {
+    display: none;
+    @include minitablets {
+      display: block;
+    }
+  }
+  &__progress {
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 20px;
+    position: relative;
+    z-index: 2;
+    display: none;
+    width: 95%;
+    margin: 0 auto;
+    @include phones {
+      display: flex;
+    }
+    @include tablets {
+      display: none;
+      margin-left: 0;
+    }
+    &_inner {
+      display: none;
+      @include minitablets {
+        display: flex;
+      }
+    }
+    &-bar {
+      width: 44px;
+      height: 3px;
+      background: #d3d9e7;
+    }
+    &-item {
+      width: 44px;
+      height: 3px;
+      margin: 0 5px;
+      &-active {
+        .advantages__progress-bar {
+          background: $blue;
+        }
+      }
+    }
+  }
+}
+
+.svgforeignobject .slick-slide img.advantages-slider__image {
+  display: block;
+}
+
+.slick-initialized .slick-slide.advantages-slider__item {
+  display: flex;
+}

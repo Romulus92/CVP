@@ -1,0 +1,182 @@
+.history {
+  &-head {
+    background: url(../images/bg-history.jpg) top center no-repeat;
+    @include phones {
+      background: url(../images/bg-history_mob.jpg) top center no-repeat;
+    }
+    &__heading {
+      @include gilam(black);
+      font-size: 95px;
+      line-height: 105px;
+      color: white;
+      padding-top: 196px;
+      margin-bottom: 267px;
+      @include phones {
+        font-size: 47px;
+        line-height: 47px;
+        margin-bottom: 170px;
+      }
+    }
+    &__block {
+      display: flex;
+      margin-bottom: 24px;
+      @include tablets {
+        margin-top: 80px;
+        flex-direction: column;
+      }
+      &-text {
+        font-size: 14px;
+        line-height: 22px;
+        @include helvetica(roman);
+        color: $darkgrey;
+        padding-left: 50px;
+        width: 50%;
+        &:last-of-type {
+          padding-left: 43px;
+          @include tablets {
+            padding-left: 0;
+          }
+        }
+        @include tablets {
+          padding-left: 0;
+          width: auto;
+          padding-bottom: 25px;
+        }
+      }
+    }
+  }
+  &-quote {
+    margin-bottom: 50px;
+    &__content {
+      display: flex;
+      background: url(../images/quote.png) no-repeat;
+      background-position-y: 38px;
+      margin-bottom: 18px;
+      height: 150px;
+      @include netbooks {
+        background: url(../images/quote.png) center right no-repeat;
+      }
+      @include phones {
+        flex-direction: column;
+        background-position-y: 100px;
+        height: 230px;
+      }
+    }
+    &__item {
+      display: flex;
+      width: 50%;
+      @include phones {
+        width: 100%;
+      }
+      &-1 {
+        .history-quote__picture_left {
+          padding-right: 22px;
+          padding-left: 22px;
+          padding-top: 8px;
+          @include tablets {
+            padding-right: 10px;
+            padding-left: 5px;
+          }
+          @include phones {
+            padding-left: 0;
+          }
+        }
+        .history-quote__picture_right {
+          padding-right: 22px;
+          margin-top: 2px;
+          padding-left: 36px;
+          padding-top: 13px;
+          @include tablets {
+            padding-right: 10px;
+            padding-left: 10px;
+          }
+        }
+      }
+      &-2 {
+        .history-quote__picture_left {
+          padding-right: 22px;
+          padding-left: 0px;
+          margin-left: -4px;
+          padding-top: 6px;
+          @include tablets {
+            padding-right: 10px;
+          }
+          @include phones {
+            margin-left: 0;
+          }
+        }
+        .history-quote__picture_right {
+          padding-right: 60px;
+          padding-left: 0px;
+          margin-left: -4px;
+          padding-top: 6px;
+          @include tablets {
+            padding-right: 10px;
+          }
+          @include phones {
+            margin-left: 0;
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+    &__picture {
+      height: 84px;
+      display: flex;
+      &_left {
+        align-items: flex-start;
+        /* padding-right: 22px;
+        padding-left: 15px;
+        padding-top: 6px; */
+      }
+      &_right {
+        align-items: flex-end;
+        /* padding-left: 22px;
+        padding-right: 4px; */
+        .history-quote__img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &__img {
+      width: 26px;
+      height: 23px;
+      fill: $lightgrey;
+    }
+    &__text {
+      font-size: 20px;
+      line-height: 30px;
+      color: $blue;
+      margin: 0;
+      @include helvetica(light-italic);
+      @include tablets {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+.quote {
+  &__author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 44px;
+    margin-top: -3px;
+    &-name {
+      width: 160px;
+      font-size: 16px;
+      line-height: 25px;
+      color: $blue;
+      @include helvetica(black);
+    }
+    &-role {
+      width: 160px;
+      font-size: 14px;
+      line-height: 25px;
+      color: $lightgrey;
+      @include helvetica(roman);
+    }
+  }
+}

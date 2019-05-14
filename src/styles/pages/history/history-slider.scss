@@ -1,0 +1,203 @@
+.history-slider {
+  margin-bottom: 75px;
+  height: 593px;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  @include tablets {
+    height: auto;
+  }
+  &__arrow {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 50px;
+    @include tablets {
+      display: none;
+    }
+    @include phones {
+      display: none;
+    }
+    .no-svgforeignobject & {
+      padding-top: 0;
+    }
+    &-left {
+      .no-svgforeignobject & {
+        padding-right: 40px;
+      }
+    }
+    &-img {
+      width: 39px;
+      height: 73px;
+      fill: $lightgrey;
+      .no-svgforeignobject & {
+        display: none;
+      }
+      &-fallback {
+        position: absolute;
+        display: none;
+        width: 39px;
+        height: 73px;
+        .no-svgforeignobject & {
+          display: block;
+        }
+      }
+    }
+    /* &-img {
+      display: none;
+      &-fallback {
+        position: absolute;
+        display: block;
+        width: 39px;
+        height: 73px;
+      }
+    } */
+  }
+  &__year {
+    display: flex;
+  }
+  &__picture {
+    padding: 0 60px 0 0;
+    @include bignotebooks {
+      width: 95%;
+      height: 95%;
+    }
+    @include tablets {
+      transform: scale(0.7);
+    }
+  }
+  &__list {
+    padding-left: 15px;
+    margin: 0;
+    margin-top: 43px;
+    margin-bottom: 64px;
+    @include tablets {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    @include phones {
+      margin-bottom: 30px;
+    }
+  }
+  &__item {
+    display: flex;
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+  &__info {
+    padding-left: 110px;
+    /*  display: flex;
+    align-items: center; */
+    @include tablets {
+      padding-left: 0;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 30px;
+    color: #484848;
+    @include helvetica(medium);
+    width: 389px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 52px;
+    @include tablets {
+      padding-left: 0;
+      width: auto;
+    }
+  }
+  &__timeline {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    @include phones {
+      display: none;
+    }
+  }
+  &__years {
+    font-size: 22px;
+    color: $lightgrey;
+    border-bottom: 1px dashed $lightgrey;
+    margin-right: 28px;
+    @include helvetica(light);
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    &-active {
+      border: none;
+      font-size: 30px;
+      @include helvetica(black);
+      color: $blue;
+      margin-bottom: -3px;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  &__progress {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    @include phones {
+      display: flex;
+      margin-bottom: 30px;
+    }
+    &-bar {
+      width: 44px;
+      height: 3px;
+      background: #d3d9e7;
+    }
+    &-item {
+      width: 44px;
+      height: 3px;
+      margin: 0 5px;
+      &-active {
+        .history-slider__progress-bar {
+          background: $blue;
+        }
+      }
+    }
+  }
+  .history-slider__list {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .history-slider__list.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+  }
+  .history-slider__list .history-slider__item {
+    display: none;
+  }
+  .history-slider__list .history-slider__item:first-child {
+    display: flex;
+    visibility: hidden;
+  }
+  .history-slider__list.slick-initialized .history-slider__item {
+    display: flex;
+    visibility: visible !important;
+  }
+}
+
+.svgforeignobject .slick-slide.history-slider__item img {
+  display: block;
+}
+
+.slick-initialized .slick-slide.history-slider__item {
+  display: flex;
+}
+
+.history-slider__list .slick-track {
+  display: flex;
+  align-items: center;
+}
+
+/* .history-slider__list .slick-list {
+  display: flex;
+  align-items: center;
+} */

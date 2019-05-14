@@ -1,0 +1,229 @@
+.expert {
+  margin-bottom: 240px;
+  @include tablets {
+    margin-bottom: 100px;
+  }
+  @include phones {
+    margin-bottom: 30px;
+  }
+  &__header {
+    padding-left: 50px;
+    @include tablets {
+      padding-left: 0;
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+  &__heading {
+    @include gilam(black);
+    color: $blue;
+    font-size: 45px;
+    line-height: 55px;
+    margin-top: 65px;
+    margin-bottom: 30px;
+    max-width: 680px;
+  }
+  &__lead {
+    @include helvetica(roman);
+    font-size: 14px;
+    line-height: 24px;
+    width: 584px;
+    margin-bottom: 120px;
+    @include tablets {
+      width: auto;
+      margin-bottom: 30px;
+    }
+  }
+  &__row {
+    display: flex;
+    &-2 {
+      margin-bottom: 63px;
+      @include tablets {
+        margin-bottom: 50px;
+      }
+    }
+    &-3 {
+      justify-content: space-between;
+      @include tablets {
+        flex-direction: column;
+      }
+    }
+  }
+  &__info {
+    width: 50%;
+    @include tablets {
+      width: auto;
+      padding-right: 5px;
+    }
+    &-span {
+      position: relative;
+      height: 23px;
+      border-bottom: 3px solid #0b69c9;
+      /* &:after {
+        content: "";
+        height: 3px;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        background-color: #0b69c9;
+      } */
+    }
+    &-1 {
+      margin-top: 36px;
+      @include tablets {
+        margin-bottom: 50px;
+        border-left: 8px solid $orange;
+        padding-left: 35px;
+      }
+    }
+    &-2 {
+      margin-top: 136px;
+      @include tablets {
+        margin-top: 0;
+        border-left: 8px solid $orange;
+        padding-left: 35px;
+      }
+    }
+    &-row {
+      display: flex;
+      width: 100%;
+      margin-bottom: 50px;
+      @include tablets {
+        .expert__info-text {
+          text-align: right;
+        }
+        .expert__info-heading {
+          text-align: right;
+        }
+      }
+      @include tablets {
+        border-left: 8px solid $orange;
+        padding-left: 35px;
+        .expert__info-text {
+          text-align: left;
+        }
+        .expert__info-heading {
+          text-align: left;
+        }
+      }
+    }
+    &-heading {
+      @include helvetica(black);
+      font-size: 25px;
+      line-height: 35px;
+      color: $darkgrey;
+      margin: 0;
+      max-width: 375px;
+      @include tablets {
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+    &-text {
+      @include helvetica(roman);
+      font-size: 13px;
+      line-height: 22px;
+      color: $darkgrey;
+      width: 330px;
+      margin-bottom: 32px;
+      @include phones {
+        width: 100%;
+      }
+    }
+    &-picture {
+      width: 30%;
+      display: flex;
+      &-1 {
+        margin-right: 32px;
+      }
+      &-2 {
+        margin-right: 26px;
+        justify-content: flex-end;
+        @include tablets {
+          justify-content: flex-start;
+        }
+      }
+      @include tablets {
+        display: none;
+      }
+    }
+    &-image {
+      &-1 {
+        height: 211px;
+      }
+      &-2 {
+        height: 130px;
+      }
+    }
+    &-content {
+      width: 70%;
+      /* @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      } */
+      @include tablets {
+        padding-right: 5px;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        align-items: flex-start;
+      }
+    }
+  }
+  &__button {
+    display: flex;
+    flex-direction: column;
+    width: 107px;
+    text-decoration: none;
+    &-text {
+      font-size: 16px;
+      line-height: 24px;
+      @include helvetica(bold);
+      color: $blue;
+      text-transform: uppercase;
+      /* background-image: linear-gradient(to right, $blue 75%, transparent 75%);
+      background-position: 0 22px;
+      background-repeat: repeat-x;
+      background-size: 11px 2px; */
+      border-bottom: 2px $blue dashed;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        color: $lightgrey;
+        border-bottom: 2px $lightgrey dashed;
+        /* background-image: linear-gradient(to right, $lightgrey 75%, transparent 75%); */
+      }
+    }
+  }
+  &__picture {
+    width: 50%;
+    &-1 {
+      padding-left: 140px;
+      @include bignotebooks {
+        padding-left: 40px;
+      }
+      @include tablets {
+        padding-left: 0;
+        transform: scale(.7);
+      }
+    }
+    &-2 {
+      padding-right: 145px;
+      width: 64%;
+      @include tablets {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 0;
+      }
+    }
+    @include tablets {
+      display: none;
+    }
+  }
+  &__image {
+    @include tablets {
+      transform: scale(.5);
+    }
+  }
+}

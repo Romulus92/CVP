@@ -1,0 +1,51 @@
+.consult-popup {
+  position: relative;
+  padding: 20px;
+  margin: auto;
+  height: 546px;
+  width: 473px;
+  @include phones {
+    width: 330px;
+  }
+  &__form {
+    height: 546px;
+    width: 473px;
+    margin-left: 0;
+    margin: auto;
+    background: url(../images/bg-popup.png) no-repeat center center;
+    @include phones {
+      background: white;
+      width: auto;
+    }
+  }
+  .mfp-close {
+    top: 26px;
+    right: 22px;
+    cursor: pointer;
+  }
+  @include phones {
+    padding: 0;
+    .feedback__form form {
+      padding-top: 70px;
+    }
+  }
+  @include iphones {
+    width: 300px;
+  }
+}
+
+.form-close-line {
+  background: #9ca1ac;
+  position: absolute;
+  transform: rotate(45deg);
+  &-1 {
+    width: 31px;
+    height: 1px;
+    top: 15px;
+  }
+  &-2 {
+    height: 31px;
+    width: 1px;
+    left: 25px;
+  }
+}

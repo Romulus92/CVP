@@ -1,0 +1,75 @@
+.info-popup {
+  width: 700px;
+  position: relative;
+  margin: auto;
+  background: white;
+  padding: 54px 81px 34px 69px;
+  @include tablets {
+    width: 100%;
+  }
+  @include phones {
+    padding: 20px 20px 20px 30px;
+    width: 330px;
+  }
+  .mfp-close {
+    top: 26px;
+    right: 22px;
+    cursor: pointer;
+  }
+  &__heading {
+    font-size: 30px;
+    line-height: 35px;
+    color: $blue;
+    @include helvetica(black);
+    @include phones {
+      font-size: 20px;
+      line-height: 25px;
+      margin-top: 45px;
+    }
+  }
+  &__lead {
+    color: $blue;
+    font-size: 20px;
+    @include helvetica(roman);
+    @include phones {
+      font-size: 16px;
+    }
+  }
+  &__subheading {
+    @include helvetica(bold);
+    text-transform: uppercase;
+    color: $darkgrey;
+    font-size: 16px;
+    line-height: 32px;
+  }
+  &__list {
+    padding: 0;
+  }
+  &__item {
+    font-size: 14px;
+    line-height: 24px;
+    @include helvetica(roman);
+    color: $orange;
+    list-style: disc outside;
+    padding-bottom: 23px;
+    span {
+      color: $darkgrey;
+    }
+  }
+  &__footnote {
+    @include helvetica(italic);
+    font-size: 14px;
+    line-height: 24px;
+    color: $lightgrey;
+  }
+  &__lead {
+    margin-top: 0;
+    margin-bottom: 53px;
+  }
+}
+
+#expertise-popup {
+  .info-popup__heading {
+    margin-bottom: 0;
+  }
+}

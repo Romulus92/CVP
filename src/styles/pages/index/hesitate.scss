@@ -1,0 +1,75 @@
+.hesitate {
+  &-content {
+    position: relative;
+    background: url(../images/bg-star.png) no-repeat center center;
+    height: 660px;
+    display: flex;
+    align-items: center;
+  }
+  &__heading {
+    @include gilam(black);
+    color: $blue;
+    font-size: 35px;
+    line-height: 45px;
+    text-align: center;
+    margin: 0;
+  }
+  &__lead {
+    font-size: 14px;
+    line-height: 24px;
+    @include helvetica(roman);
+    color: $darkgrey;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  &__button {
+    width: 267px;
+    height: 68px;
+    margin-left: 64px;
+    font-size: 13px;
+    color: white;
+    text-transform: uppercase;
+    @include helvetica(bold);
+    text-decoration: none;
+    outline: none;
+    @include tablets {
+      margin-left: 0;
+    }
+  }
+  &__image {
+    position: absolute;
+    @include tablets {
+      display: none;
+    }
+    &-1 {
+      left: 110px;
+      top: 160px;
+      @include bignotebooks {
+        left: 5px;
+        top: 160px;
+      }
+    }
+    &-2 {
+      right: 10px;
+      bottom: -125px;
+      @include bignotebooks {
+        right: -150px;
+        bottom: -125px;
+      }
+    }
+  }
+  &__text {
+    margin: 0 auto;
+    margin-top: 18px;
+    width: 400px;
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+  }
+}

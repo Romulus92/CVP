@@ -1,0 +1,140 @@
+.list {
+  height: 1050px;
+  @include phones {
+    height: 650px;
+    /* background: url(../images/bg-list_mob.png) no-repeat; */
+    @include angled-edge("outside top", "upper right", #f7f7f7);
+    @include angled-edge("outside bottom", "lower left", #f7f7f7);
+    &:after {
+      z-index: -1;
+    }
+    background: #f7f7f7;
+    background-size: cover;
+    margin-bottom: 100px;
+  }
+  &-bg {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+    @include phones {
+      display: none;
+    }
+  }
+  &__heading {
+    font-size: 65px;
+    line-height: 75px;
+    color: $blue;
+    @include gilam(black);
+    padding-left: 53px;
+    margin: 0;
+    @include phones {
+      font-size: 40px;
+      line-height: 45px;
+      padding-left: 0;
+    }
+  }
+  &__lead {
+    font-size: 14px;
+    line-height: 24px;
+    @include helvetica(roman);
+    color: $darkgrey;
+    width: 547px;
+    padding-left: 100px;
+    margin-top: 26px;
+    @include bignotebooks {
+      margin-right: 20px;
+    }
+    @include tablets {
+      width: 400px;
+      margin-right: 0;
+      padding-left: 0;
+    }
+    @include phones {
+      width: auto;
+    }
+  }
+  &-content {
+    padding-top: 400px;
+    @include tablets {
+      padding-top: 150px;
+    }
+    @include phones {
+      padding-top: 50px;
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__schedule {
+    width: 448px;
+    height: 268px;
+    border: 1px solid $blue;
+    border-radius: 3px;
+    background: white;
+    padding: 50px 32px 35px 42px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 51px;
+    @include bignotebooks {
+      width: 400px;
+      padding: 25px 32px 35px 42px;
+      height: 230px;
+    }
+    @include phones {
+      width: auto;
+      padding: 25px 15px 15px 15px;
+    }
+    &-heading {
+      margin: 0;
+      font-size: 22px;
+      line-height: 32px;
+      color: $darkgrey;
+      @include helvetica(bold);
+      margin-bottom: 19px;
+      @include bignotebooks {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    &-lead {
+      margin: 0;
+      font-size: 12px;
+      line-height: 18px;
+      color: $lightgrey;
+      @include helvetica(roman);
+      margin-bottom: 25px;
+    }
+    &-download {
+      display: flex;
+      flex-direction: column;
+      width: 128px;
+      &-text {
+        color: $orange;
+        font-size: 16px;
+        line-height: 32px;
+        @include helvetica(bold);
+        text-transform: uppercase;
+        text-decoration: none;
+        /* background-image: linear-gradient(to right, $orange 75%, transparent 75%);
+        background-position: 0 30px;
+        background-repeat: repeat-x;
+        background-size: 11px 2px; */
+        border-bottom: 2px $orange dashed;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          color: $lightgrey;
+          border-bottom: 2px $lightgrey dashed;
+          /* background-image: linear-gradient(to right, $lightgrey 75%, transparent 75%); */
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,267 @@
+.docs {
+  &__item {
+    padding: 60px 0 0 55px;
+    margin-left: 53px;
+    background: #fafafa;
+    display: flex;
+    margin-bottom: 60px;
+    @include tablets {
+      flex-direction: column;
+      background: none;
+      padding: 0;
+    }
+    @include phones {
+      margin-left: 0;
+    }
+    &-wrap {
+      width: 214px;
+      height: 307px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    &-picture {
+      @include tablets {
+        display: none;
+      }
+    }
+    &-img {
+      width: 100%;
+      height: 100%;
+    }
+    &_contract {
+      padding: 48px 0 78px 55px;
+      @include tablets {
+        padding: 0;
+      }
+      @include phones {
+        margin-left: 0;
+      }
+    }
+    &_license {
+      padding: 20px 0 28px 55px;
+      justify-content: space-between;
+      @include tablets {
+        padding: 0;
+      }
+      @include phones {
+        margin-left: 0;
+      }
+      .docs__item-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    &_schedule {
+      padding: 60px 0 68px 55px;
+      @include tablets {
+        padding: 0;
+      }
+      @include phones {
+        margin-left: 0;
+      }
+      .docs__item-heading {
+        width: 445px;
+      }
+      .docs__item-content {
+        margin-top: -8px;
+      }
+      .docs__item-text {
+        margin-bottom: 28px;
+      }
+    }
+    &_reg {
+      padding: 0 0 0 55px;
+      @include tablets {
+        padding: 0;
+      }
+      @include phones {
+        margin-left: 0;
+      }
+      .docs__item-header {
+        padding-top: 53px;
+        padding-bottom: 68px;
+      }
+      .docs__item-content {
+        display: flex;
+        align-items: center;
+      }
+      .docs__item-picture {
+        margin-left: 95px;
+      }
+      .docs__item-lead {
+        margin-bottom: 30px;
+      }
+    }
+    &-list {
+      width: 214px;
+      height: 307px;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 23px;
+      @include tablets {
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+    }
+    &-heading {
+      font-size: 45px;
+      line-height: 55px;
+      @include gilam(black);
+      color: $blue;
+      padding-right: 112px;
+      margin: 0;
+      @include bignotebooks {
+        font-size: 40px;
+      }
+    }
+    &-lead {
+      font-size: 14px;
+      line-height: 24px;
+      @include helvetica(roman);
+      color: $darkgrey;
+      max-width: 500px;
+    }
+    &-content {
+      padding-right: 88px;
+      position: relative;
+      padding-left: 0;
+      @include tablets {
+        padding-right: 0;
+      }
+    }
+    &-text {
+      font-size: 14px;
+      line-height: 24px;
+      @include helvetica(roman);
+      color: $darkgrey;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+    &-button {
+      width: 227px;
+      height: 68px;
+      font-size: 13px;
+      color: white;
+      text-transform: uppercase;
+      @include helvetica(bold);
+      text-decoration: none;
+      @include tablets {
+        margin: 0 auto;
+      }
+    }
+    &-progress {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      &-bar {
+        width: 44px;
+        height: 3px;
+        background: #d3d9e7;
+      }
+      &-item {
+        width: 44px;
+        height: 3px;
+        margin: 0 5px;
+        &-active {
+          .docs__item-progress-bar {
+            background: $blue;
+          }
+        }
+      }
+    }
+    &-arrows {
+      @include tablets {
+        display: none;
+      }
+    }
+    &-arrow {
+      position: absolute;
+      top: 50%;
+      width: 50px;
+      height: 50px;
+      border-radius: 1px;
+      @include gradient-border(#d3d9e7, $lightgrey, 1px, "to bottom");
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &-bg {
+        width: 48px;
+        height: 48px;
+        background: white;
+        transition: background-color 0.4s ease-in-out;
+      }
+      &-left {
+        top: 121px;
+        left: -33px;
+        &:hover {
+          @include gradient-border(#0078d7, #0063b1, 1px, "to left");
+          .docs__item-arrow-bg {
+            background: linear-gradient(to left, #0078d7, #0063b1);
+          }
+          .docs__item-arrow-img {
+            fill: white;
+          }
+        }
+      }
+      &-right {
+        right: 55px;
+        top: 121px;
+        &:hover {
+          @include gradient-border(#0078d7, #0063b1, 1px, "to right");
+          .docs__item-arrow-bg {
+            background: linear-gradient(to right, #0078d7, #0063b1);
+          }
+          .docs__item-arrow-img {
+            fill: white;
+          }
+        }
+      }
+      &-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        fill: $blue;
+        width: 17px;
+        transition: fill 0.4s ease-in-out;
+        .no-svgforeignobject & {
+          display: none;
+        }
+        &-fallback {
+          position: absolute;
+          left: 15px;
+          top: 15px;
+          display: none;
+          width: 23px;
+          height: 18px;
+          .no-svgforeignobject & {
+            display: block;
+          }
+        }
+      }
+    }
+    &-legaltext {
+      font-size: 12px;
+      line-height: 18px;
+      @include helvetica(roman);
+      color: $lightgrey;
+    }
+  }
+  &__zoom {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-top: 115px;
+    display: none;
+  }
+}
+
+.svgforeignobject .slick-slide img.docs__item-img {
+  display: block;
+}
+
+.slick-initialized .slick-slide.docs__item-wrap {
+  display: flex;
+}
